@@ -36,9 +36,9 @@ import time
 
 import datetime
 
-pool = cx_Oracle.SessionPool("admin", "Fico12345678",
+pool = cx_Oracle.SessionPool("username", "Password",
 
-       "ficodb_high", 2, 5, 1, threaded = True)
+       "service_name", 2, 5, 1, threaded = True)
 
 #csvf = open('ficob_data.csv', 'w')
 
@@ -51,8 +51,6 @@ cursor = conn.cursor()
 #cursor.arraysize = 80000
 
 print("TheLongQuery(): beginning execute...")
-
-
 
 print("Starting to dump data to object storage!\n")
 
@@ -130,7 +128,7 @@ begin
 
     'test_cred', 
 
-    'https://swiftobjectstorage.us-ashburn-1.oraclecloud.com/v1/ficolcl/test/test_file_prakash.txt',
+    'https://swiftobjectstorage.us-ashburn-1.oraclecloud.com/v1/ficolcl/test/test_file.txt',
 
     'DATA_PUMP_DIR',
 
