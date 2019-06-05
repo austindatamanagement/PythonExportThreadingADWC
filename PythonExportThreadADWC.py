@@ -48,10 +48,10 @@ begin
 
   p_file := utl_file.fopen( 'DATA_PUMP_DIR', 'test_file.txt', 'w' );
 
-  for c in (select * from sales WHERE ROWNUM <= 10)
+  for c in (select * from table_name WHERE ROWNUM <= 10)
 
   loop
-    utl_file.put_line(p_file, c.cust_id );
+    utl_file.put_line(p_file, c.column_name );
   end loop;
 
   utl_file.fclose(p_file);
