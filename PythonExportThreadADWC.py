@@ -10,9 +10,9 @@ import time
 
 import datetime
 
-pool = cx_Oracle.SessionPool("username", "Password",
+pool = cx_Oracle.SessionPool("Username", "Password",
 
-       "service_name", 2, 5, 1, threaded = True)
+       "Service_Name", 2, 5, 1, threaded = True)
 
 #csvf = open('ficob_data.csv', 'w')
 
@@ -46,7 +46,7 @@ declare
 
 begin
 
-  p_file := utl_file.fopen( 'DATA_PUMP_DIR', 'test_export_python1.dmp', 'w' );
+  p_file := utl_file.fopen( 'DATA_PUMP_DIR', 'test_file.txt', 'w' );
 
   for c in (select * from sales WHERE ROWNUM <= 10)
 
@@ -66,9 +66,7 @@ begin
 
     'test_file.txt' );
 
-    
-
-end;
+  end;
 
                 """)
 
