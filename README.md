@@ -1,4 +1,4 @@
-# Exporting from tables in Autonomous Database to text file in Object Storage
+# Exporting from tables in Autonomous Database to text file in Object Storage using Threads.
 
 ## Objectives
 	
