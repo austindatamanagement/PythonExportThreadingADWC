@@ -1,5 +1,5 @@
 Updated - June 5, 2019 
-By Megha Gajbhiye
+/By Megha Gajbhiye
 
 # Exporting from tables in Autonomous Database to text file in Object Storage using Threads.
 
