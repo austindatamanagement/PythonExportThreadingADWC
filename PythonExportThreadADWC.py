@@ -1,29 +1,3 @@
-My script on python
-
-
-
-#------------------------------------------------------------------------------
-
-# Threads.py
-
-#   This script demonstrates the use of threads with cx_Oracle. A session pool
-
-# is used so that multiple connections are available to perform work on the
-
-# database. Only one operation (such as an execute or fetch) can take place at
-
-# a time on a connection. In the below example, one of the threads performs
-
-# dbms_lock.sleep while the other performs a query.
-
-#
-
-# This script requires cx_Oracle 2.5 and higher.
-
-#------------------------------------------------------------------------------
-
-
-
 from __future__ import print_function
 
 
@@ -72,63 +46,21 @@ declare
 
 begin
 
+  p_file := utl_file.fopen( 'DATA_PUMP_DIR', 'test_export_python1.dmp', 'w' );
 
-
-  p_file := utl_file.fopen( 'DATA_PUMP_DIR', 'test_file.txt', 'w' );
-
-  
-
-  for c in ( SELECT
-
-              PRFRD_SHOPPING_DY||1 || '|' ||
-
-    1 || '|' ||
-
-              GLBL_OFR_ID || '|' ||
-
-              RAM_MBR_PFL.CLIENT_MBR_ID || '|' ||
-
-              RAM_CREATED_DATE || '|' ||
-
-              null || '|' ||
-
-              OFR_TMPL_ID || '|' ||
-
-              OFR_STRT_DT || '|' ||
-
-              OFR_END_DT || '|' ||
-
-              OFR_PRI || '|' ||
-
-              PROPNSITY_SCR || '|' ||
-
-              CAST(AWRD_VAL AS number) || '|' ||
-
-              CTRL_GRP_IND as LINE
-
-              FROM RAM_RCMDN RAM_RCMDN JOIN RAM_MBR_PFL RAM_MBR_PFL
-
-              ON RAM_MBR_PFL.RAM_UNQ_MBR_ID = RAM_RCMDN.RAM_UNQ_MBR_ID
-
-    where wkly_ofr_excutn_id=28 )
+  for c in (select * from sales WHERE ROWNUM <= 10)
 
   loop
-
-    utl_file.put_line( p_file, c.line );
-
+    utl_file.put_line(p_file, c.cust_id );
   end loop;
-
-  
 
   utl_file.fclose(p_file);
 
-  
-
   dbms_cloud.put_object( 
 
-    'test_cred', 
+    'OBJ_STORE_CRED', 
 
-    'https://swiftobjectstorage.us-ashburn-1.oraclecloud.com/v1/ficolcl/test/test_file.txt',
+    'swift URL to Object Storage/test_file.txt',
 
     'DATA_PUMP_DIR',
 
