@@ -46,10 +46,10 @@ In the below example, one of the threads performs dbms_lock.sleep while the othe
   
 - Change the following parameter in this part of the script:
 
-  **dbms_cloud.put_object(
-  	 **'OBJ_STORE_CRED', 
-	 **'swift URL to Object Storage/test_file.txt',
-	 **'DATA_PUMP_DIR',
+  **dbms_cloud.put_object(**
+  	 **'OBJ_STORE_CRED',** 
+	 **'swift URL to Object Storage/test_file.txt',**
+	 **'DATA_PUMP_DIR',**
 	 **'test_file.txt' );**
   
   
