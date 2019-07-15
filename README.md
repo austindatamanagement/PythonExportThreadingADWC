@@ -73,10 +73,30 @@ In the below example, one of the threads performs dbms_lock.sleep while the othe
     
 - Create Object Store Bucket and a swift URL for the bucket:
 
-    1. Create Object Storage Bucket:
+    1. Open the navigation menu. Under Core Infrastructure, click Object Storage.
+
+    2. A list of the buckets in the compartment you're viewing is displayed. If you don’t see the one you're looking for, verify that you’re viewing the correct compartment (select from the list on the left side of the page).
+
+    3. Select a compartment from the Compartment list on the left side of the page.
+
+       A list of existing buckets is displayed.
+
+    4. Click Create Bucket.
+       In the Create Bucket dialog box, specify the attributes of the bucket:
+
+       **Bucket Name**: The system generates a default bucket name that reflects the current year, month, day, and time, for example bucket-20190306-1359. If you change this default to any other bucket name, use letters, numbers, dashes, underscores, and periods. Do not include any confidential information.
+       **Storage Tier**: Select the tier in which you want to store your data. Available tiers include:
+
+       Standard is the primary, default Object Storage tier for storing frequently accessed data that requires fast and immediate access.
+       Archive is a special tier for storing infrequently accessed data that requires long retention periods. Access to data in the Archive tier is not immediate. You must restore archived data before it’s accessible. For more information, see Overview of Archive Storage.
+ 
+       **Encryption**: Buckets are encrypted with keys managed by Oracle by default, but you can optionally encrypt the data in this bucket using your own Key Management encryption key. To use Key Management for your encryption needs, select Encrypt Using Customer-Managed Keys. Then, select the Vault Compartment and Vault that contain the master encryption key you want to use. Also select the Master Encryption Key Compartment and Master Encryption Key. For more information about encryption, see Overview of Key Management. For details on how to create a vault, see Managing Vaults.
+
+       **Tags**:Optionally, you can apply tags. If you have permissions to create a resource, you also have permissions to apply free-form tags to that resource. To apply a defined tag, you must have permissions to use the tag namespace. For more information about tagging, see Resource Tags. If you are not sure if you should apply tags, skip this option (you can apply tags later) or ask your administrator.
+
+     5. Click Create Bucket.
     
         
-
 ### **Step 3**: Configure your environment.
 
 - Change the following parameters in this part of the script:
