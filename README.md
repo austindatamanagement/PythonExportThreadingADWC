@@ -152,7 +152,7 @@ In the below example, one of the threads performs dbms_lock.sleep while the othe
      
      Here is the procedure:
      
-  	1. Create Auth token: Follow the following link to create auth token: https://www.oracle.com/webfolder/technetwork/tutorials/obe/cloud/adwc/OBE_Loading%20Your%20Data/loading_your_data.html#CreateanObjectStoreAuthToken
+  	1. Create Auth token: Follow the following link to create auth token: https://www.oracle.com/webfolder/technetwork/tutorials/obe/cloud/adwc/OBE_Loading%20Your%20Data/loading_your_data.html#CreateanObjectStoreAuthToken . 
      
   
   	2. Create Object Storage credential:
