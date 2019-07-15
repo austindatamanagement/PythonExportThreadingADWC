@@ -113,6 +113,3 @@ In the below example, one of the threads performs dbms_lock.sleep while the othe
    "**python PythonExportThreadADWC.py**" 
  
    Navigate to your object storage and you should see test_file.txt file with all your data.
-
-
-  
