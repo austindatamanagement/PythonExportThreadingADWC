@@ -70,18 +70,18 @@ In the below example, one of the threads performs dbms_lock.sleep while the othe
         ![](uploadsales.png)
         
     3. Click on next till you reach the review page and click on finish. Table is created and the data is loaded.
-    
-- Create Object Store Bucket and a swift URL for the bucket:
 
-    1. Open the navigation menu. Under Core Infrastructure, click Object Storage.
+### **Step 3**: Create Object Store Bucket and a swift URL for the bucket:
 
-    2. A list of the buckets in the compartment you're viewing is displayed. If you don’t see the one you're looking for, verify that you’re viewing the correct compartment (select from the list on the left side of the page).
+   1. Open the navigation menu. Under Core Infrastructure, click Object Storage.
 
-    3. Select a compartment from the Compartment list on the left side of the page.
+   2. A list of the buckets in the compartment you're viewing is displayed. If you don’t see the one you're looking for, verify that you’re viewing the correct compartment (select from the list on the left side of the page).
+
+   3. Select a compartment from the Compartment list on the left side of the page.
 
        A list of existing buckets is displayed.
 
-    4. Click Create Bucket.
+   4. Click Create Bucket.
        In the Create Bucket dialog box, specify the attributes of the bucket:
 
        **Bucket Name**: The system generates a default bucket name that reflects the current year, month, day, and time, for example bucket-20190306-1359. If you change this default to any other bucket name, use letters, numbers, dashes, underscores, and periods. Do not include any confidential information.
@@ -94,7 +94,7 @@ In the below example, one of the threads performs dbms_lock.sleep while the othe
 
        **Tags**:Optionally, you can apply tags. If you have permissions to create a resource, you also have permissions to apply free-form tags to that resource. To apply a defined tag, you must have permissions to use the tag namespace. For more information about tagging, see Resource Tags. If you are not sure if you should apply tags, skip this option (you can apply tags later) or ask your administrator.
 
-     5. Click Create Bucket.
+   5. Click Create Bucket.
     
         
 ### **Step 3**: Configure your environment.
