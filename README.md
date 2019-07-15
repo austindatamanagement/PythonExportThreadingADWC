@@ -71,7 +71,7 @@ In the below example, one of the threads performs dbms_lock.sleep while the othe
         
     3. Click on next till you reach the review page and click on finish. Table is created and the data is loaded.
 
-### **Step 3**: Create Object Store Bucket and a swift URL for the bucket:
+### **Step 3**: Create Object Store Bucket and a URL for the bucket:
 
    1. Open the navigation menu. Under Core Infrastructure, click Object Storage.
 
@@ -102,7 +102,47 @@ In the below example, one of the threads performs dbms_lock.sleep while the othe
       https://objectstorage.{region_name}.oraclecloud.com/n/{tenant_name}/b/{bucket_name}/o
         
       Change "region name" with the name of your region, "tenant name" with your tenancy name and "bucket_name" with the name of the bucket you just created. 
-      
+
+### **STEP 4**: Set up instant client with Autonomous Database Wallet.  
+
+- **Download Client Credentials (Wallets)**: Please follow this link to download the wallet: https://docs.oracle.com/en/cloud/paas/autonomous-data-warehouse-cloud/user/connect-download-wallet.html#GUID-B06202D2-0597-41AA-9481-3B174F75D4B1
+
+- **Download Instant Client** - "Basic Package - All files required to run OCI, OCCI, and JDBC-OCI applications" from the following link: https://www.oracle.com/technetwork/topics/intel-macsoft-096467.html. 
+NOTE: You need to accept the agreement first before downloading the package.  Unzip the file.
+
+
+ ![](ic.png)
+ 
+
+- **Unzip the Autonomous wallet downloaded, and navigate to sqlnet.ora.** 
+  Edit sqlnet.ora as follows:
+
+  On your command prompt, type: 
+  
+    **nano sqlnet.ora** - This will open the file to edit. 
+
+    WALLET_LOCATION = (SOURCE = (METHOD = file) (METHOD_DATA = (DIRECTORY=**$TNS_ADMIN**)))
+    SSL_SERVER_DN_MATCH=yes
+    
+- Set LD_LIBRARY_PATH. Type the following command in your command prompt:
+    
+    **export LD_LIBRARY_PATH=Path of your instant client folder:$LD_LIBRARY_PATH**
+    
+    Note: Repeat this everytime you restart the laptop. Or add the above command in your ~/.bash_profile.
+    
+    My instant client folder location is  **/Users/megha/instantclient_12_2**, so my command looks like this: 
+    
+     ![](ld.png)
+    
+- Set environment variables TNS_ADMIN to point to the wallet folder. Type the following command in your command prompt:
+    
+    **export TNS_ADMIN=Path of your unzipped wallet folder**
+
+    Note: Repeat this everytime you restart the laptop. Or add the above command in your ~/.bash_profile.
+    
+    My TNS_ADMIN location is in **/Users/megha/instantclient_12_2/network/admin/**, so my command looks like this: 
+
+    ![](tns.png)
       
 ### **Step 3**: Configure your environment.
 
