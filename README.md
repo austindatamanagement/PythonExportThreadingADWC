@@ -43,7 +43,37 @@ In the below example, one of the threads performs dbms_lock.sleep while the othe
 
 - Clone the script to your desktop. [PythonExportThreadADWC.py](PythonExportThreadADWC.py)
 
-### **Step 2**: Configure your environment.
+### **Step 2**: Create SALES table in Autonomous Database.
+
+- You need to have a connection to database through SQL Developer.
+    1.	Connection Name: give any name
+    2.	Username: enter your username.
+    3.	Password: enter database password
+    4.	Connection Type: Cloud PDB
+    5.	Configuration File: Path to your autonomous database wallet
+    6.	Keystore Password: Password entered while downloading wallet. 
+
+  ![](login.png)
+
+- Click on Test, if it shows success, click on save and then click on connect. 
+
+- Download the csv file. [sales.csv](sales.csv)
+
+- Upload data from the following csv file in your autonomous database.
+
+    1. Right click on **table** and then **import data**.
+
+        ![](importdata.png)
+        
+    2. Leave the source as **Local File**, click on Browse and select the downloaded csv file.
+    
+        ![](browse.png)
+        
+    3. Click on next till you reach the review page and click on finish. Table is created and the data is loaded.
+    
+    
+
+### **Step 3**: Configure your environment.
 
 - Change the following parameters in this part of the script:
 
@@ -75,8 +105,14 @@ In the below example, one of the threads performs dbms_lock.sleep while the othe
   
   1. **OBJ_STORE_CRED**: Name of the credential that you have created in your Autonomous Environment. 
   2. **swift URL to Object Storage**: Change this to swift URL of your Object Storage
-  
- - Now run the script. Navigate to your object storage and you should see test_file.txt file with all your data.
+
+### **Step 4**: Run the script.
+
+ - Now run the script. Go to your Terminal and type the following command: 
+ 
+   "**python PythonExportThreadADWC.py**" 
+ 
+   Navigate to your object storage and you should see test_file.txt file with all your data.
 
 
   
