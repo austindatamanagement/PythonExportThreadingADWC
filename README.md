@@ -71,7 +71,11 @@ In the below example, one of the threads performs dbms_lock.sleep while the othe
         
     3. Click on next till you reach the review page and click on finish. Table is created and the data is loaded.
     
+- Create Object Store Bucket and a swift URL for the bucket:
+
+    1. Create Object Storage Bucket:
     
+        
 
 ### **Step 3**: Configure your environment.
 
@@ -121,10 +125,10 @@ In the below example, one of the threads performs dbms_lock.sleep while the othe
      
      Here is the procedure:
      
-  	- Create Auth token: Follow the following link to create auth token: https://www.oracle.com/webfolder/technetwork/tutorials/obe/cloud/adwc/OBE_Loading%20Your%20Data/loading_your_data.html#CreateanObjectStoreAuthToken
+  	1. Create Auth token: Follow the following link to create auth token: https://www.oracle.com/webfolder/technetwork/tutorials/obe/cloud/adwc/OBE_Loading%20Your%20Data/loading_your_data.html#CreateanObjectStoreAuthToken
      
   
-  	- Create Object Storage credential:
+  	2. Create Object Storage credential:
 	
 	  Follow the following link to create object storage credential:
 			https://www.oracle.com/webfolder/technetwork/tutorials/obe/cloud/adwc/OBE_Loading%20Your%20Data/loading_your_data.html#CreateObjectStoreCredentialsinyourAutonomousDataWarehouseSchema
