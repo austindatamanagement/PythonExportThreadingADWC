@@ -85,6 +85,7 @@ In the below example, one of the threads performs dbms_lock.sleep while the othe
        In the Create Bucket dialog box, specify the attributes of the bucket:
 
        **Bucket Name**: The system generates a default bucket name that reflects the current year, month, day, and time, for example bucket-20190306-1359. If you change this default to any other bucket name, use letters, numbers, dashes, underscores, and periods. Do not include any confidential information.
+       
        **Storage Tier**: Select the tier in which you want to store your data. Available tiers include:
 
        Standard is the primary, default Object Storage tier for storing frequently accessed data that requires fast and immediate access.
@@ -98,7 +99,7 @@ In the below example, one of the threads performs dbms_lock.sleep while the othe
     
    6. Create Object Storage URL as follows:
 
-      https://objectstorage.<region_name>.oraclecloud.com/n/<tenant_name>/b/<bucket_name>/o
+      https://objectstorage.{region_name}.oraclecloud.com/n/{tenant_name}/b/{bucket_name}/o
         
       Change "region name" with the name of your region, "tenant name" with your tenancy name and "bucket_name" with the name of the bucket you just created. 
       
