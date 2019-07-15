@@ -67,7 +67,7 @@ In the below example, one of the threads performs dbms_lock.sleep while the othe
         
     2. Leave the source as **Local File**, click on Browse and select the downloaded csv file.
     
-        ![](browse.png)
+        ![](uploadsales.png)
         
     3. Click on next till you reach the review page and click on finish. Table is created and the data is loaded.
     
