@@ -115,7 +115,7 @@ In the below example, one of the threads performs dbms_lock.sleep while the othe
 	 **'test_file.txt' );**
   
   
-  -  **OBJ_STORE_CRED**
+ -  **OBJ_STORE_CRED**
       
      Make sure that you create object storage credential with the name "OBJ_STORE_CRED".
      
