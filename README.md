@@ -96,7 +96,13 @@ In the below example, one of the threads performs dbms_lock.sleep while the othe
 
    5. Click Create Bucket.
     
+   6. Create Object Storage URL as follows:
+
+      https://objectstorage.<region_name>.oraclecloud.com/n/<tenant_name>/b/<bucket_name>/o
         
+      Change "region name" with the name of your region, "tenant name" with your tenancy name and "bucket_name" with the name of the bucket you just created. 
+      
+      
 ### **Step 3**: Configure your environment.
 
 - Change the following parameters in this part of the script:
@@ -134,7 +140,7 @@ In the below example, one of the threads performs dbms_lock.sleep while the othe
 
   **dbms_cloud.put_object(**
   	 **'OBJ_STORE_CRED',** 
-	 **'swift URL to Object Storage/test_file.txt',**
+	 **'URL to Object Storage/test_file.txt',**
 	 **'DATA_PUMP_DIR',**
 	 **'test_file.txt' );**
   
@@ -155,7 +161,11 @@ In the below example, one of the threads performs dbms_lock.sleep while the othe
 
 
  	
- -  **swift URL to Object Storage**: Change this to swift URL of your Object Storage
+ -  **URL to Object Storage**: Change this to URL of your Object Storage that you have created above/test_file.txt. 
+    
+    It should look something like :
+     
+    "https://objectstorage.<region_name>.oraclecloud.com/n/<tenant_name>/b/<bucket_name>/o/test_file.txt"
 
 ### **Step 4**: Run the script.
 
