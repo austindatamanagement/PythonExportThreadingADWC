@@ -65,7 +65,7 @@ In the below example, one of the threads performs dbms_lock.sleep while the othe
 
         ![](importdata.png)
         
-    2. Leave the source as **Local File**, click on Browse and select the downloaded csv file.
+    2. Leave the source as **Local File**, click on Browse and select the downloaded csv file. Click on "open".
     
         ![](uploadsales.png)
         
