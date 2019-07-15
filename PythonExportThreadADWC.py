@@ -60,7 +60,7 @@ begin
 
     'OBJ_STORE_CRED', 
 
-    'swift URL to Object Storage/test_file.txt',
+    'URL to Object Storage/test_file.txt',
 
     'DATA_PUMP_DIR',
 
