@@ -188,12 +188,13 @@ NOTE: You need to accept the agreement first before downloading the package.  Un
   
  -  **OBJ_STORE_CRED**
       
-     Make sure that you create object storage credential with the name "OBJ_STORE_CRED".
+    Make sure that you create object storage credential with the name "OBJ_STORE_CRED".
      
-     Here is the procedure:
+    Here is the procedure:
      
-  	1. Create Auth token: Follow the following link to create auth token: https://www.oracle.com/webfolder/technetwork/tutorials/obe/cloud/adwc/OBE_Loading%20Your%20Data/loading_your_data.html#CreateanObjectStoreAuthToken . 
-     
+       1. Create Auth token: Follow the following link to create auth token: https://www.oracle.com/webfolder/technetwork/tutorials/obe/cloud/adwc/OBE_Loading%20Your%20Data/loading_your_data.html#CreateanObjectStoreAuthToken .   
+   
+   
   
   	2. Create Object Storage credential:
 	
