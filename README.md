@@ -208,7 +208,7 @@ NOTE: You need to accept the agreement first before downloading the package.  Un
     
     It should look something like :
      
-    "https://objectstorage.<region_name>.oraclecloud.com/n/<tenant_name>/b/<bucket_name>/o/test_file.txt"
+    "https://objectstorage.{region_name}.oraclecloud.com/n/{tenant_name}/b/{bucket_name}/o/test_file.txt"
 
 ### **Step 4**: Run the script.
 
