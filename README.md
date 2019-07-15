@@ -32,7 +32,12 @@ In the below example, one of the threads performs dbms_lock.sleep while the othe
 
     - Click on Test, if it shows success, click on save and then click on connect. 
  
- - This script requires cx_Oracle 2.5 and higher.
+ - This script requires Python to be configured in your environment. 
+ 
+ - This script requires cx_Oracle version 2.5 or higher. 
+    
+    Please download it using the following command on your Terminal .    
+    "**python -m pip install cx_Oracle --upgrade**" . 
  
 ### **Step 1**: Download the Script
 
