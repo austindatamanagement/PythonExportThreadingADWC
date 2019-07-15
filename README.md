@@ -91,8 +91,20 @@ In the below example, one of the threads performs dbms_lock.sleep while the othe
     
     **utl_file.put_line(p_file, c.column_name );**
   
-  1. **table_name** : Your Table name
+  1. **table_name** : Your Table name. Since we have uploaded "sales.csv", we will change this to "sales". 
+     
+     Code should look like: 
+     
+     **for c in (select * from sales WHERE ROWNUM <= 10)**
+     
   2. **column_name** : Your Column name
+  
+     We will give one of the column of sales table, which is "cust_id".
+     
+     Code should look like:
+     
+     **utl_file.put_line(p_file, c.cust_id );**
+     
  
 - Change the following parameter in this part of the script:
 
@@ -103,8 +115,23 @@ In the below example, one of the threads performs dbms_lock.sleep while the othe
 	 **'test_file.txt' );**
   
   
-  1. **OBJ_STORE_CRED**: Name of the credential that you have created in your Autonomous Environment. 
-  2. **swift URL to Object Storage**: Change this to swift URL of your Object Storage
+  -  **OBJ_STORE_CRED**
+      
+     Make sure that you create object storage credential with the name "OBJ_STORE_CRED".
+     
+     Here is the procedure:
+     
+  	- Create Auth token: Follow the following link to create auth token: https://www.oracle.com/webfolder/technetwork/tutorials/obe/cloud/adwc/OBE_Loading%20Your%20Data/loading_your_data.html#CreateanObjectStoreAuthToken
+     
+  
+  	- Create Object Storage credential:
+	
+	  Follow the following link to create object storage credential:
+			https://www.oracle.com/webfolder/technetwork/tutorials/obe/cloud/adwc/OBE_Loading%20Your%20Data/loading_your_data.html#CreateObjectStoreCredentialsinyourAutonomousDataWarehouseSchema
+
+
+ 	
+ -  **swift URL to Object Storage**: Change this to swift URL of your Object Storage
 
 ### **Step 4**: Run the script.
 
