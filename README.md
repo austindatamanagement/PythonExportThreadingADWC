@@ -101,7 +101,15 @@ In the below example, one of the threads performs dbms_lock.sleep while the othe
 
       https://objectstorage.{region_name}.oraclecloud.com/n/{tenant_name}/b/{bucket_name}/o
         
-      Change "region name" with the name of your region, "tenant name" with your tenancy name and "bucket_name" with the name of the bucket you just created. 
+      Change "region name" with the name of your region. It can be found in top right corner of your cloud account.  
+      
+      ![](region.png)
+      
+      Change "tenant name" with your tenancy name. 
+
+      ![](tenancyname.png)
+
+      Change "bucket_name" with the name of the bucket you just created. 
 
 ### **STEP 4**: Set up instant client with Autonomous Database Wallet.  
 
