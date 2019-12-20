@@ -6,7 +6,7 @@ By Megha Gajbhiye
 
 ## Objectives
 	
-In this lab we will be exporting data from AUtonomous Database to a text file in object storage. 
+In this lab we will be exporting data from Autonomous Database to a text file in object storage. 
 This script demonstrates the use of threads with cx_Oracle. A session pool is used so that multiple connections are available to perform work on the database. 
 Only one operation (such as an execute or fetch) can take place at a time on a connection. 
 In the below example, one of the threads performs dbms_lock.sleep while the other performs a query. 
